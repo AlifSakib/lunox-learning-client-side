@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { createUser, updateInfo } = useContext(AuthContext);
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
@@ -15,7 +17,14 @@ const Register = () => {
     createUser(userInfo.email, userInfo.password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        navigate("/");
+        updateInfo({ displayName: userInfo.name })
+          .then(() => {
+            toast.success("Account Created and Profile Updated");
+          })
+          .catch(() => {
+            toast.error("Profile Update Denied");
+          });
       })
       .catch((error) => {
         console.error(error);
