@@ -4,7 +4,8 @@ import { FaBtc, FaCcMastercard, FaCcPaypal, FaCcVisa } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 const Checkout = () => {
   const courseCheckOut = useLoaderData();
-  const { image, title } = courseCheckOut;
+  const { image, title, instructor, lecture, duration, enrolled, language } =
+    courseCheckOut;
   const handleCheckOut = () => {
     toast.success("Payment Successful");
   };
@@ -48,11 +49,23 @@ const Checkout = () => {
             <h5 className="mb-4 text-4xl font-extrabold leading-none">
               {title}
             </h5>
-            <p className="mb-6 text-gray-900">Instructor : Amanda</p>
-            <p className="mb-6 text-gray-900">Lecture : 14</p>
-            <p className="mb-6 text-gray-900">Duration : 6 weeks</p>
-            <p className="mb-6 text-gray-900">Enrolled : 20 students</p>
-            <p className="mb-6 text-gray-900">Language : English</p>
+            <p className="mb-6 text-gray-900">
+              {" "}
+              <span className="font-bold">Instructor</span> :{" "}
+              <span className="text-blue-500 underline">{instructor}</span>
+            </p>
+            <p className="mb-6 text-gray-900">
+              <span className="font-bold">Lecture</span> : {lecture}
+            </p>
+            <p className="mb-6 text-gray-900">
+              <span className="font-bold">Duration</span> : {duration} weeks
+            </p>
+            <p className="mb-6 text-gray-900">
+              <span className="font-bold">Enrolled</span> : {enrolled} students
+            </p>
+            <p className="mb-6 text-gray-900">
+              <span className="font-bold">Language</span> : {language}
+            </p>
             <hr className="mb-5 border-gray-300" />
             <div className="flex justify-between">
               <div className="flex items-center space-x-4">

@@ -94,6 +94,16 @@ const Header = () => {
                 Blog
               </Link>
             </li>
+            <li>
+              <Link
+                to="/faq"
+                aria-label="Product pricing"
+                title="Product pricing"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
+              >
+                FAQ
+              </Link>
+            </li>
             {user && (
               <li>
                 <button

@@ -1,11 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
+import { FaBook, FaChalkboardTeacher } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
+import { useReactToPrint } from "react-to-print";
 import { AuthContext } from "../../../contexts/AuthProvider";
-
 const CourseDetails = () => {
   const courseDetails = useLoaderData();
   const { user } = useContext(AuthContext);
-  const { image, title, category, description, id } = courseDetails;
+  const {
+    image,
+    title,
+    category,
+    description,
+    id,
+    price,
+    instructor,
+    lecture,
+  } = courseDetails;
+
+  const componentRef = useRef();
+  const handlePrintPdf = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: "emp-data",
+    // onAfterPrint: () => alert("Print Success"),
+  });
+
   console.log(courseDetails);
   return (
     <div>
@@ -32,20 +50,35 @@ const CourseDetails = () => {
             </div>
           </a>
         </div>
+
         <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
-          <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-            {title}
-          </h2>
-          <p className="mb-5 text-base text-gray-700 md:text-lg">
-            {description}
-          </p>
+          <div ref={componentRef}>
+            <div className="flex justify-between mb-6">
+              <p className="flex text-xl items-center">
+                <FaChalkboardTeacher className="mx-2 text-blue-600"></FaChalkboardTeacher>{" "}
+                {instructor}
+              </p>
+              <p className="flex text-xl items-center ">
+                <FaBook className="mx-2 text-blue-600"></FaBook> {lecture}{" "}
+                Lesson
+              </p>
+            </div>
+            <h2 className="mb-5  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              {title}
+            </h2>
+            <p className="mb-5 text-base text-gray-700 md:text-lg">
+              {description}
+            </p>
+          </div>
+
           <div className="flex items-center md:justify-center">
-            <a
-              href="/"
+            <button
+              // to="/reactPdf"
+              onClick={handlePrintPdf}
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
             >
               Download Pdf
-            </a>
+            </button>
 
             <Link
               to={`/course/checkout/${id}`}
