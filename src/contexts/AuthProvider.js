@@ -46,7 +46,14 @@ const AuthProvider = ({ children }) => {
     });
     return () => unsubscribe();
   }, []);
-  const value = { user, createUser, updateInfo, logInUser, logOutUser };
+  const value = {
+    user,
+    createUser,
+    updateInfo,
+    logInUser,
+    logOutUser,
+    loading,
+  };
   return (
     <div>
       <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
