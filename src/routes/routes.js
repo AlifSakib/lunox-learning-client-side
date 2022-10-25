@@ -5,11 +5,11 @@ import Courses from "../components/Courses/RightSide/Courses";
 import Home from "../components/Home/Home";
 import Blogs from "../components/Pages/Blogs/Blogs";
 import Checkout from "../components/Pages/Checkout/Checkout";
+import CheckOutConfirm from "../components/Pages/Checkout/CheckOutConfirm";
 import ErrorPage from "../components/Pages/ErrorPage/ErrorPage";
 import FAQ from "../components/Pages/FAQ/FAQ";
 import Login from "../components/Pages/Login/Login";
 import Register from "../components/Pages/Register/Register";
-import ReactPdf from "../components/ReactPdf/ReactPdf";
 
 import Main from "../layout/Main";
 import PrivateRoutes from "./PrivateRoutes";
@@ -60,8 +60,8 @@ export const router = createBrowserRouter([
         element: <Blogs></Blogs>,
       },
       {
-        path: "/reactPdf",
-        element: <ReactPdf></ReactPdf>,
+        path: "/confirmCheckout",
+        element: <CheckOutConfirm></CheckOutConfirm>,
       },
       {
         path: "/faq",

@@ -1,7 +1,7 @@
 import React from "react";
 import toast from "react-hot-toast";
 import { FaBtc, FaCcMastercard, FaCcPaypal, FaCcVisa } from "react-icons/fa";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 const Checkout = () => {
   const courseCheckOut = useLoaderData();
   const { image, title, instructor, lecture, duration, enrolled, language } =
@@ -95,13 +95,14 @@ const Checkout = () => {
                 </a>
               </div>
               <div>
-                <button
+                <Link
+                  to="/confirmCheckout"
                   onClick={handleCheckOut}
                   aria-label=""
                   className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-red-400 hover:bg-green-500 focus:shadow-outline focus:outline-none"
                 >
                   Checkout
-                </button>
+                </Link>
               </div>
             </div>
           </div>
