@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
@@ -8,13 +8,13 @@ const Header = () => {
   const { user, logOutUser } = useContext(AuthContext);
   const [theme, setTheme] = useState(null);
 
-  /* useEffect(() => {
+  useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-  }, [theme]); */
+  }, [theme]);
 
   const handleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -22,8 +22,8 @@ const Header = () => {
 
   return (
     <div>
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 dark:bg-slate-900 dark:text-white">
-        <div className="relative flex items-center justify-between">
+      <div className="px-4 py-5  dark:bg-slate-900 dark:text-white">
+        <div className="relative flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <a
             href="/"
             aria-label="Company"

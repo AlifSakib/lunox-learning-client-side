@@ -1,5 +1,4 @@
 import React, { useContext, useRef } from "react";
-import { FaBook, FaChalkboardTeacher } from "react-icons/fa";
 import { Link, useLoaderData } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 import { AuthContext } from "../../../contexts/AuthProvider";
@@ -53,15 +52,11 @@ const CourseDetails = () => {
 
         <div className="mb-16 md:mb-0 md:max-w-xl sm:mx-auto md:text-center">
           <div ref={componentRef}>
-            <div className="flex justify-between mb-6">
-              <p className="flex text-xl items-center">
-                <FaChalkboardTeacher className="mx-2 text-blue-600"></FaChalkboardTeacher>{" "}
-                {instructor}
-              </p>
-              <p className="flex text-xl items-center ">
-                <FaBook className="mx-2 text-blue-600"></FaBook> {lecture}{" "}
-                Lesson
-              </p>
+            <div className=" mb-6 text-start font-bold text-2xl text-red-500 underline underline-offset-4">
+              <h3>
+                ${price}
+                <span className="text-lg">.00</span>
+              </h3>
             </div>
             <h2 className="mb-5  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               {title}
