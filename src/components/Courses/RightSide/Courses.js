@@ -7,9 +7,9 @@ const Courses = () => {
   const courses = useLoaderData();
   console.log(courses);
   return (
-    <div className="grid lg:grid-cols-8 lg:w-9/12 mx-auto">
-      <div className="lg:grid col-span-2  mx-6 hidden">
-        <div className="lg:flex lg:items-center">
+    <div className="grid lg:grid-cols-8 lg:w-9/12 mx-auto ">
+      <div className="lg:grid col-span-2  mx-6 hidden ">
+        <div className="mt-28">
           <Categories></Categories>
         </div>
       </div>
@@ -24,7 +24,7 @@ const Courses = () => {
               science. No prior experience necessary to get started.
             </p>
           </div>
-          <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-4 sm:grid-cols-2">
+          <div className="grid gap-5 row-gap-5 mb-8 lg:grid-cols-3 sm:grid-cols-2">
             {courses.map((course) => (
               <Course key={course.id} course={course}></Course>
             ))}

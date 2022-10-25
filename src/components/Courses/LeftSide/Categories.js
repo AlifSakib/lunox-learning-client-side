@@ -17,7 +17,7 @@ const Categories = () => {
         >
           <div
             key={category.id}
-            className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-purple-400 hover:border-purple-400 mb-5 px-8"
+            className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-purple-400 hover:border-purple-400 mb-5 "
           >
             <div className="mr-2">
               <svg
