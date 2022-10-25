@@ -1,15 +1,28 @@
 import React, { useContext, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 import { AuthContext } from "../../contexts/AuthProvider";
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOutUser } = useContext(AuthContext);
+  const [theme, setTheme] = useState(null);
+
+  /* useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]); */
+
+  const handleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <div>
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 dark:bg-slate-900 dark:text-white">
         <div className="relative flex items-center justify-between">
           <a
             href="/"
@@ -32,17 +45,31 @@ const Header = () => {
               <rect x="14" y="1" width="7" height="6" />
               <rect x="14" y="11" width="7" height="12" />
             </svg>
-            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 ">
+            <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 dark:text-white">
               _Lunox
             </span>
           </a>
-          <ul className="flex items-center hidden space-x-8 lg:flex">
+          <ul className="flex items-center hidden space-x-8 lg:flex dark:text-white">
+            <li>
+              <button
+                onClick={handleTheme}
+                aria-label="Our product"
+                title="Our product"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
+              >
+                {theme === "dark" ? (
+                  <FaMoon className="w-6 h-6 mt-2 text-blue-600"></FaMoon>
+                ) : (
+                  <FaSun className="w-6 h-6 mt-2 text-yellow-400"></FaSun>
+                )}
+              </button>
+            </li>
             <li>
               <Link
                 to="/"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
               >
                 Home
               </Link>
@@ -52,7 +79,7 @@ const Header = () => {
                 to="/courses"
                 aria-label="Our product"
                 title="Our product"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
               >
                 Courses
               </Link>
@@ -62,7 +89,7 @@ const Header = () => {
                 to="/blogs"
                 aria-label="Product pricing"
                 title="Product pricing"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
               >
                 Blog
               </Link>
