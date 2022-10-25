@@ -1,9 +1,9 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const CourseDetails = () => {
   const courseDetails = useLoaderData();
-  const { image, title, category, description } = courseDetails;
+  const { image, title, category, description, id } = courseDetails;
   console.log(courseDetails);
   return (
     <div>
@@ -44,13 +44,13 @@ const CourseDetails = () => {
             >
               Download Pdf
             </a>
-            <a
-              href="/"
+            <Link
+              to={`/course/checkout/${id}`}
               aria-label=""
               className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-gray-800 transition duration-200 rounded shadow-md bg-yellow-400 hover:bg-yellow-500 focus:shadow-outline focus:outline-none"
             >
               Get Premium Access
-            </a>
+            </Link>
           </div>
         </div>
       </div>
