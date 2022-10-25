@@ -7,7 +7,7 @@ const Courses = () => {
   const courses = useLoaderData();
   console.log(courses);
   return (
-    <div className="grid lg:grid-cols-8 w-9/12 mx-auto">
+    <div className="grid lg:grid-cols-8 lg:w-9/12 mx-auto">
       <div className="lg:grid col-span-2  mx-6 hidden">
         <div className="lg:flex lg:items-center">
           <Categories></Categories>

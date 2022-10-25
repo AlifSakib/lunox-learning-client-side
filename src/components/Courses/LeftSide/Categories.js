@@ -11,7 +11,10 @@ const Categories = () => {
   return (
     <div>
       {categories.map((category) => (
-        <Link to={`/category/${category.category_id}`} key={category.id}>
+        <Link
+          to={`/courses/category/${category.category_id}`}
+          key={category.id}
+        >
           <div
             key={category.id}
             className="flex items-center p-2 transition-colors duration-200 border rounded shadow group hover:bg-purple-400 hover:border-purple-400 mb-5 px-8"
