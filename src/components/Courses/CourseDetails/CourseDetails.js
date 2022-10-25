@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const CourseDetails = () => {
   const courseDetails = useLoaderData();
+  const { user } = useContext(AuthContext);
   const { image, title, category, description, id } = courseDetails;
   console.log(courseDetails);
   return (
@@ -44,6 +46,7 @@ const CourseDetails = () => {
             >
               Download Pdf
             </a>
+
             <Link
               to={`/course/checkout/${id}`}
               aria-label=""

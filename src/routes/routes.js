@@ -10,6 +10,7 @@ import Login from "../components/Pages/Login/Login";
 import Register from "../components/Pages/Register/Register";
 
 import Main from "../layout/Main";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -46,7 +47,11 @@ export const router = createBrowserRouter([
         path: "/course/checkout/:id",
         loader: ({ params }) =>
           fetch(`http://localhost:5000/course/checkout/${params.id}`),
-        element: <Checkout></Checkout>,
+        element: (
+          <PrivateRoutes>
+            <Checkout></Checkout>
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/blogs",

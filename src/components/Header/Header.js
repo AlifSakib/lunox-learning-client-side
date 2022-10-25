@@ -71,7 +71,7 @@ const Header = () => {
                 <a
                   href="/"
                   aria-label="About us"
-                  title="About us"
+                  title={user.displayName}
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   <div className="flex justify-center items-center space-x-6 text-pink-500">

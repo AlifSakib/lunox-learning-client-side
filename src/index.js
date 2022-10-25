@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Toaster } from "react-hot-toast";
-import ReactTooltip from "react-tooltip";
 import App from "./App";
 import AuthProvider from "./contexts/AuthProvider";
 import "./index.css";
@@ -13,7 +12,6 @@ root.render(
     <AuthProvider>
       <App />
       <Toaster></Toaster>
-      <ReactTooltip />
     </AuthProvider>
   </React.StrictMode>
 );

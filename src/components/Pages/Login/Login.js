@@ -1,7 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { GoogleAuthProvider } from "firebase/auth";
+import React, { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../../contexts/AuthProvider";
 
 const Login = () => {
+  const provider = new GoogleAuthProvider();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
+  const { logInUser, googleSignIn } = useContext(AuthContext);
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
@@ -9,6 +16,26 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    logInUser(userInfo.email, userInfo.password)
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleSignInWithGoogle = () => {
+    googleSignIn(provider)
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const handleEmailChange = (e) => {
@@ -89,10 +116,13 @@ const Login = () => {
             </button>
 
             <p className="mt-4 text-center text-gray-600 dark:text-gray-400">
-              or log in with
+              or
             </p>
 
-            <button className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 w-full">
+            <button
+              onClick={handleSignInWithGoogle}
+              className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 w-full"
+            >
               <svg className="w-6 h-6 mx-2" viewBox="0 0 40 40">
                 <path
                   d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 9.99999 20 9.99999C22.5492 9.99999 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33335 10.7958 3.33335 20C3.33335 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z"
@@ -112,7 +142,7 @@ const Login = () => {
                 />
               </svg>
 
-              <span className="mx-2">Log in with Google</span>
+              <span className="mx-2">Continue with Google</span>
             </button>
 
             <div className="mt-6 text-center ">
