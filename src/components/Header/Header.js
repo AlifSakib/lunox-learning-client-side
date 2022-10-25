@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import ReactTooltip from "react-tooltip";
 import { AuthContext } from "../../contexts/AuthProvider";
 
 const Header = () => {
@@ -68,10 +69,12 @@ const Header = () => {
             </li>
             {user && (
               <li>
-                <a
+                <button
+                  data-tip
+                  data-for="username"
                   href="/"
                   aria-label="About us"
-                  title={user.displayName}
+                  title=""
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                 >
                   <div className="flex justify-center items-center space-x-6 text-pink-500">
@@ -96,7 +99,12 @@ const Header = () => {
                       )}
                     </div>
                   </div>
-                </a>
+                </button>
+                {user.displayName && (
+                  <ReactTooltip id="username" place="top" effect="solid">
+                    {user.displayName}
+                  </ReactTooltip>
+                )}
               </li>
             )}
             {user?.uid ? (
