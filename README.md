@@ -23,19 +23,19 @@ like blogs , FAQ , etc .
 #### Get all items
 
 ```http
-  GET https://beyond-the-horizon-server.vercel.app/places
+  GET https://lunox-learning-server-side.vercel.app/courses
 ```
 
 #### Get all items
 
 ```http
-  GET https://beyond-the-horizon-server.vercel.app/hotels
+  GET https://lunox-learning-server-side.vercel.app/categories
 ```
 
 #### Get item
 
 ```http
-  GET https://beyond-the-horizon-server.vercel.app/bookingDetails/${id}
+  GET https://lunox-learning-server-side.vercel.app/courses/${id}
 ```
 
 ## Technologies
