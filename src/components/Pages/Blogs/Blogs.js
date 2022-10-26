@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   return (
@@ -31,9 +32,12 @@ const Blogs = () => {
                 </a>
               </div>
               <p className="text-gray-700">
-                Well, the way they make shows is, they make one show. That
-                show's called a pilot. Then they show that show to the people
-                who make shows.
+                What is CORS used for? Cross-Origin Resource Sharing (CORS) is
+                an HTTP-header based mechanism that allows a server to indicate
+                any origins (domain, scheme, or port) other than its own from
+                which a browser should permit loading resources, If your REST
+                API's resources receive non-simple cross-origin HTTP requests,
+                you need to enable CORS support.
               </p>
             </div>
           </div>
@@ -64,8 +68,18 @@ const Blogs = () => {
                 </a>
               </div>
               <p className="text-gray-700">
-                Chase ball of string eat plants, meow, and throw up because I
-                ate plants going to catch the red dot today going.
+                Firebase Authentication system is easy to use . Firebase
+                Authentication provides backend services, easy-to-use SDKs, and
+                ready-made UI libraries to authenticate users to your app. It
+                supports authentication using passwords, phone numbers, popular
+                federated identity providers like Google, Facebook and Twitter,
+                and more. There are some aulternatives : <br />
+                1 . STYTCH
+                <br />
+                2 . Okta
+                <br />
+                3 . Ory
+                <br />4 . Supabase
               </p>
             </div>
           </div>
@@ -95,8 +109,12 @@ const Blogs = () => {
                 </a>
               </div>
               <p className="text-gray-700">
-                Sportacus andrew weatherall goose Refined gentlemen super mario
-                des lynam alpha trion zap.
+                React Router is one of the most important components of React
+                ecosystem. PrivateRoute component is the blueprint for all
+                private routes in the application. If the user is logged in, go
+                on and display the component in question; otherwise, redirect
+                the user to sign-in page. Additionally, we can define the logic
+                of isLogin utility function separately in utils folder.
               </p>
             </div>
           </div>
@@ -126,15 +144,18 @@ const Blogs = () => {
                 </a>
               </div>
               <p className="text-gray-700">
-                Sportacus andrew weatherall goose Refined gentlemen super mario
-                des lynam alpha trion zap.
+                It is a used as backend service where javascript works on the
+                server-side of the application. This way javascript is used on
+                both frontend and backend. Node. js runs on chrome v8 engine
+                which converts javascript code into machine code, it is highly
+                scalable, lightweight, fast, and data-intensive.
               </p>
             </div>
           </div>
         </div>
         <div className="text-center">
-          <a
-            href="/"
+          <Link
+            to="#"
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
@@ -146,7 +167,7 @@ const Blogs = () => {
             >
               <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

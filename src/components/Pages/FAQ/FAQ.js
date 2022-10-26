@@ -6,12 +6,8 @@ const FAQ = () => {
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <div>
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                Brand new
-              </p>
-            </div>
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+            <div></div>
+            <h2 className="max-w-lg mb-6  text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
               <span className="relative inline-block">
                 <svg
                   viewBox="0 0 52 24"
@@ -35,14 +31,9 @@ const FAQ = () => {
                     height="24"
                   />
                 </svg>
-                <span className="relative">The</span>
               </span>{" "}
-              quick, brown fox jumps over a lazy dog
+              <h1 className="text-6xl"> What can we help you find?</h1>
             </h2>
-            <p className="text-base text-gray-700 md:text-lg">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque rem aperiam, eaque ipsa quae.
-            </p>
           </div>
         </div>
         <div className="max-w-screen-xl sm:mx-auto">
@@ -50,25 +41,33 @@ const FAQ = () => {
             <div className="space-y-8">
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  The quick, brown fox jumps over a lazy dog?
+                  About suspended accounts
                 </p>
                 <p className="text-gray-700">
-                  Space, the final frontier. These are the voyages of the
-                  Starship Enterprise. Its five-year mission: to explore strange
-                  new worlds.
+                  Spam: Most of the accounts we suspend are suspended because
+                  they are spammy, or just plain fake, and they introduce
+                  security risks for and for everyone using . These types of
+                  accounts are against our Rules. Sometimes a real person’s
+                  account gets suspended by mistake, and in those cases we’ll
                   <br />
                   <br />
-                  Many say exploration is part of our destiny, but it’s actually
-                  our duty to future generations.
+                  account is unsuspended. Account security at risk: If we
+                  suspect an account has been hacked or compromised, we may
+                  suspend it until it can be secured and restored to the account
+                  owner in order to reduce potentially malicious activity caused
                 </p>
               </div>
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  The first mate and his Skipper too will do?
+                  Help with locked or limited account
                 </p>
                 <p className="text-gray-700">
-                  Well, the way they make shows is, they make one show. That
-                  show's called a pilot.
+                  work with the person to make sure the by the compromise.
+                  Abusive Tweets or behavior: We may suspend an account if it
+                  has been reported to us as violating our Rules surrounding
+                  abuse. When an account engages in abusive behavior, like
+                  sending threats to others or impersonating other accounts, we
+                  may suspend it temporarily or, in some cases, permanently.
                   <br />
                   <br />
                   Then they show that show to the people who make shows, and on
@@ -80,12 +79,20 @@ const FAQ = () => {
               </div>
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  Is the Space Pope reptilian!?
+                  How to add your phone number to your account?
                 </p>
                 <p className="text-gray-700">
-                  A flower in my garden, a mystery in my panties. Heart attack
-                  never stopped old Big Bear. I didn't even know we were calling
-                  him Big Bear.
+                  Adding a phone number to your account is a great step toward a
+                  better Twitter experience. If you’re thinking about adding
+                  your number, here are a few benefits: Keeping your account
+                  secure. With a phone number on your account, you’ll be able to
+                  enroll in security features like login verification. Faster
+                  account recovery. If you ever lose access to your account,
+                  having a phone number attached can make it easier for you to
+                  get back in to Twitter. Connect with friends and contacts.
+                  With a phone number on your account, you can easily connect
+                  with people you know. Read more about allowing others to find
+                  you by your phone number.
                 </p>
               </div>
             </div>
@@ -107,26 +114,35 @@ const FAQ = () => {
               </div>
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  Galaxies Orion's sword globular star cluster?
+                  How to update your email address?
                 </p>
                 <p className="text-gray-700">
-                  A business big enough that it could be listed on the NASDAQ
-                  goes belly up. Disappears!
+                  Note: Each time the email address associated with your Twitter
+                  account is updated, we will send an email notification to the
+                  previously-used email address alerting you of this change. For
+                  more information on these types of alerts, read about account
+                  security.
                   <br />
                   <br />
-                  It ceases to exist without me. No, you clearly don't know who
-                  you're talking to, so let me clue you in.
+                  In addition, we will continue to store your previously-used
+                  email addresses, and will use this information for safety and
+                  security purposes.
                 </p>
               </div>
               <div>
                 <p className="mb-4 text-xl font-medium">
-                  When has justice ever been as simple as a rule book?
+                  About Direct Messages?
                 </p>
                 <p className="text-gray-700">
-                  This is not about revenge. This is about justice. A lot of
-                  things can change in twelve years, Admiral. Well, that's
-                  certainly good to know. About four years. I got tired of
-                  hearing how young I looked.
+                  The basics To send a Direct Message from Twitter for iOS To
+                  send a Direct Message from Twitter for Android To send a
+                  Direct Message via the web To pin Direct Messages To search
+                  Direct Messages To snooze Direct Message notifications To
+                  report a Direct Message or conversation To share a Tweet via
+                  Direct Message To receive Direct Messages from anyone To
+                  review Direct Message requests To disable Direct Message read
+                  receipts To send and receive Direct Messages on your phone via
+                  SMS
                 </p>
               </div>
             </div>
