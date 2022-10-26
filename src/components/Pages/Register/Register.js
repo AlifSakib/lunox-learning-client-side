@@ -1,14 +1,15 @@
-import { GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthProvider";
-
 const Register = () => {
   const proviver = new GoogleAuthProvider();
-  const location = useLocation();
+  const gitProvider = new GithubAuthProvider();
   const navigate = useNavigate();
-  const { createUser, updateInfo, googleSignIn } = useContext(AuthContext);
+  const { createUser, updateInfo, googleSignIn, githubSignIn } =
+    useContext(AuthContext);
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
@@ -43,6 +44,17 @@ const Register = () => {
       })
       .catch((error) => {
         console.error(error);
+      });
+  };
+
+  const handleSignInWithGithub = () => {
+    githubSignIn(gitProvider)
+      .then((result) => {
+        const user = result.user;
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
       });
   };
 
@@ -189,6 +201,16 @@ const Register = () => {
                   fill="#1976D2"
                 />
               </svg>
+
+              <span className="mx-2">Continue with Google</span>
+            </button>
+            <button
+              onClick={handleSignInWithGithub}
+              className="flex items-center justify-center px-6 py-3 mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600 w-full"
+            >
+              <div>
+                <FaGithub className="w-6 h-6 mx-2"></FaGithub>{" "}
+              </div>
 
               <span className="mx-2">Continue with Google</span>
             </button>

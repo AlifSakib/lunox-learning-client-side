@@ -30,25 +30,32 @@ export const router = createBrowserRouter([
       },
       {
         path: "/courses",
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch("https://lunox-learning-server-side.vercel.app/courses"),
         element: <Courses></Courses>,
       },
       {
         path: "/courses/category/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/courses/category/${params.id}`),
+          fetch(
+            `https://lunox-learning-server-side.vercel.app/courses/category/${params.id}`
+          ),
         element: <CourseCategory></CourseCategory>,
       },
       {
         path: "/course/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course/${params.id}`),
+          fetch(
+            `https://lunox-learning-server-side.vercel.app/course/${params.id}`
+          ),
         element: <CourseDetails></CourseDetails>,
       },
       {
         path: "/course/checkout/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course/checkout/${params.id}`),
+          fetch(
+            `https://lunox-learning-server-side.vercel.app/course/checkout/${params.id}`
+          ),
         element: (
           <PrivateRoutes>
             <Checkout></Checkout>
