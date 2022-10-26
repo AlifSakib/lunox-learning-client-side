@@ -10,6 +10,7 @@ const CourseDetails = () => {
     title,
     category,
     description,
+    duration,
     id,
     price,
     instructor,
@@ -56,11 +57,22 @@ const CourseDetails = () => {
                 <span className="text-lg">.00</span>
               </h3>
             </div>
-            <h2 className="mb-5  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            <h2 className="mb-5  text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none text-start">
               {title}
             </h2>
-            <p className="mb-5 text-base text-gray-700 md:text-lg">
+            <p className="mb-5 text-base text-gray-700 md:text-lg text-start">
               {description}
+            </p>
+            <p className="mb-6 text-gray-900 text-start">
+              {" "}
+              <span className="font-bold">Instructor</span> :{" "}
+              <span className="text-blue-500 underline ">{instructor}</span>
+            </p>
+            <p className="mb-6 text-gray-900 text-start">
+              <span className="font-bold">Duration</span> : {duration} weeks
+            </p>
+            <p className="mb-6 text-gray-900 text-start">
+              <span className="font-bold">Lecture</span> : {lecture}
             </p>
           </div>
 
