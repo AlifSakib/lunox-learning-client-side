@@ -212,7 +212,7 @@ const Register = () => {
                 <FaGithub className="w-6 h-6 mx-2"></FaGithub>{" "}
               </div>
 
-              <span className="mx-2">Continue with Google</span>
+              <span className="mx-2">Continue with Github</span>
             </button>
 
             <div className="mt-6 text-center ">

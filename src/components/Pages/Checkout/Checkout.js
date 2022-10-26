@@ -23,8 +23,8 @@ const Checkout = () => {
           </div>
 
           <div className="lg:pr-10 text-start">
-            <a
-              href="/"
+            <Link
+              to="#"
               aria-label="Go Home"
               title="Logo"
               className="inline-block mb-5"
@@ -45,7 +45,7 @@ const Checkout = () => {
                   />
                 </svg>
               </div>
-            </a>
+            </Link>
             <h5 className="mb-4 text-4xl font-extrabold leading-none">
               {title}
             </h5>
@@ -69,30 +69,30 @@ const Checkout = () => {
             <hr className="mb-5 border-gray-300" />
             <div className="flex justify-between">
               <div className="flex items-center space-x-4">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <FaCcMastercard className="w-6 h-6 text-red-500"></FaCcMastercard>
-                </a>
-                <a
-                  href="/"
+                </Link>
+                <Link
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <FaCcPaypal className="w-6 h-6 text-sky-500"></FaCcPaypal>
-                </a>
-                <a
-                  href="/"
+                </Link>
+                <Link
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"
                 >
                   <FaCcVisa className="w-6 h-6 text-blue-600"></FaCcVisa>
-                </a>
-                <a
-                  href="/"
+                </Link>
+                <Link
+                  to="#"
                   className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400 "
                 >
                   <FaBtc className="w-6 h-6 text-orange-400"></FaBtc>
-                </a>
+                </Link>
               </div>
               <div>
                 <Link

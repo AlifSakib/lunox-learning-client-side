@@ -9,27 +9,27 @@ const Blogs = () => {
           <div className="grid py-8 sm:grid-cols-4">
             <div className="mb-4 sm:mb-0">
               <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                   aria-label="Category"
                 >
                   Express
-                </a>
+                </Link>
                 <p className="text-gray-600">10 Jan 2022</p>
               </div>
             </div>
             <div className="sm:col-span-3 lg:col-span-2">
               <div className="mb-3">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   aria-label="Article"
                   className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                 >
                   <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
                     What is cors ?
                   </p>
-                </a>
+                </Link>
               </div>
               <p className="text-gray-700">
                 What is CORS used for? Cross-Origin Resource Sharing (CORS) is
@@ -44,20 +44,20 @@ const Blogs = () => {
           <div className="grid py-8 sm:grid-cols-4">
             <div className="mb-4 sm:mb-0">
               <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                   aria-label="Category"
                 >
                   Authentication
-                </a>
+                </Link>
                 <p className="text-gray-600">26 Oct 2022</p>
               </div>
             </div>
             <div className="sm:col-span-3 lg:col-span-2">
               <div className="mb-3">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   aria-label="Article"
                   className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                 >
@@ -65,7 +65,7 @@ const Blogs = () => {
                     Why are you using firebase ? What other option do you have
                     to implement authentication ?
                   </p>
-                </a>
+                </Link>
               </div>
               <p className="text-gray-700">
                 Firebase Authentication system is easy to use . Firebase
@@ -86,27 +86,27 @@ const Blogs = () => {
           <div className="grid py-8 sm:grid-cols-4">
             <div className="mb-4 sm:mb-0">
               <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                   aria-label="Category"
                 >
                   React
-                </a>
+                </Link>
                 <p className="text-gray-600">28 Oct 2022</p>
               </div>
             </div>
             <div className="sm:col-span-3 lg:col-span-2">
               <div className="mb-3">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   aria-label="Article"
                   className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                 >
                   <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
                     How does the provate route work ?
                   </p>
-                </a>
+                </Link>
               </div>
               <p className="text-gray-700">
                 React Router is one of the most important components of React
@@ -121,27 +121,27 @@ const Blogs = () => {
           <div className="grid py-8 sm:grid-cols-4">
             <div className="mb-4 sm:mb-0">
               <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
                   aria-label="Category"
                 >
                   Node
-                </a>
+                </Link>
                 <p className="text-gray-600">28 Oct 2022</p>
               </div>
             </div>
             <div className="sm:col-span-3 lg:col-span-2">
               <div className="mb-3">
-                <a
-                  href="/"
+                <Link
+                  to="#"
                   aria-label="Article"
                   className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
                 >
                   <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
                     What is Node ? how does Node work ?
                   </p>
-                </a>
+                </Link>
               </div>
               <p className="text-gray-700">
                 It is a used as backend service where javascript works on the

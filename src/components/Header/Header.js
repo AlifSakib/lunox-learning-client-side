@@ -24,14 +24,14 @@ const Header = () => {
     <div>
       <div className="px-4 py-5  dark:bg-slate-900 dark:text-white">
         <div className="relative flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-          <a
-            href="/"
+          <Link
+            to="/"
             aria-label="Company"
             title="Company"
             className="inline-flex items-center"
           >
             <svg
-              className="w-8 text-deep-purple-accent-400 rounded-full"
+              className="w-8 text-purple-400 rounded-full"
               viewBox="0 0 24 24"
               strokeLinejoin="round"
               strokeWidth="2"
@@ -48,13 +48,13 @@ const Header = () => {
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 dark:text-white">
               _Lunox
             </span>
-          </a>
+          </Link>
           <ul className="flex items-center hidden space-x-8 lg:flex dark:text-white">
             <li>
               <button
                 onClick={handleTheme}
-                aria-label="Our product"
-                title="Our product"
+                aria-label="Lunox"
+                title="Lunox"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-purple-400"
               >
                 {theme === "dark" ? (
@@ -67,8 +67,8 @@ const Header = () => {
             <li>
               <Link
                 to="/"
-                aria-label="Our product"
-                title="Our product"
+                aria-label="Home"
+                title="Home"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
               >
                 Home
@@ -77,8 +77,8 @@ const Header = () => {
             <li>
               <Link
                 to="/courses"
-                aria-label="Our product"
-                title="Our product"
+                aria-label="Courses"
+                title="Courses"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
               >
                 Courses
@@ -87,8 +87,8 @@ const Header = () => {
             <li>
               <Link
                 to="/blogs"
-                aria-label="Product pricing"
-                title="Product pricing"
+                aria-label="Blogs"
+                title="Blogs"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
               >
                 Blog
@@ -97,8 +97,8 @@ const Header = () => {
             <li>
               <Link
                 to="/faq"
-                aria-label="Product pricing"
-                title="Product pricing"
+                aria-label="FAQ"
+                title="FAQ"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
               >
                 FAQ
@@ -197,14 +197,14 @@ const Header = () => {
                 <div className="p-5 bg-white border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div>
-                      <a
-                        href="/"
+                      <Link
+                        to="/"
                         aria-label="Company"
                         title="Company"
                         className="inline-flex items-center"
                       >
                         <svg
-                          className="w-8 text-deep-purple-accent-400"
+                          className="w-8 text-purple-400"
                           viewBox="0 0 24 24"
                           strokeLinejoin="round"
                           strokeWidth="2"
@@ -219,9 +219,9 @@ const Header = () => {
                           <rect x="14" y="11" width="7" height="12" />
                         </svg>
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Company
+                          _Lunox
                         </span>
-                      </a>
+                      </Link>
                     </div>
                     <div>
                       <button
@@ -242,54 +242,71 @@ const Header = () => {
                   <nav>
                     <ul className="space-y-4">
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
+                        <Link
+                          to="/"
+                          aria-label="Home"
+                          title="Home"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                          Product
-                        </a>
+                          Home
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
+                        <Link
+                          to="/courses"
+                          aria-label="Courses"
+                          title="Courses"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                          Features
-                        </a>
+                          Courses
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        <Link
+                          to="/blogs"
+                          aria-label="Blogs"
+                          title="Blogs"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
                         >
-                          Pricing
-                        </a>
+                          Blog
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          aria-label="About us"
-                          title="About us"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        <Link
+                          to="/faq"
+                          aria-label="FAQ"
+                          title="FAQ"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
                         >
-                          About us
-                        </a>
+                          FAQ
+                        </Link>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Sign up
-                        </a>
+                        {user?.uid ? (
+                          <li>
+                            <Link to="/login">
+                              <button
+                                onClick={logOutUser}
+                                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-blue-500 hover:bg-blue-700 focus:shadow-outline focus:outline-none rounded-full"
+                                aria-label="Sign out"
+                                title="Logout"
+                              >
+                                Logout
+                              </button>
+                            </Link>
+                          </li>
+                        ) : (
+                          <li>
+                            <Link
+                              to="/register"
+                              className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 shadow-md bg-blue-500 hover:bg-blue-700 focus:shadow-outline focus:outline-none rounded-full"
+                              aria-label="Register"
+                              title="Register"
+                            >
+                              Register
+                            </Link>
+                          </li>
+                        )}
                       </li>
                     </ul>
                   </nav>

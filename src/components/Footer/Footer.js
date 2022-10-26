@@ -16,31 +16,31 @@ export const Footer = () => {
       <div className="px-4 pt-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2">
-            <a
-              href="/"
+            <Link
+              to="#"
               aria-label="Go home"
               title="Company"
-              className="inline-flex items-center"
+              className="inline-flex items-center text-white mx-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={1.5}
+                stroke-width="1.5"
                 stroke="currentColor"
-                className="w-8 h-8 text-white"
+                class="w-8 h-8"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
                 />
               </svg>
 
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase">
                 Lunox Learning
               </span>
-            </a>
+            </Link>
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm text-purple-100">
                 Tell me and I forget, teach me and I may remember, involve me
