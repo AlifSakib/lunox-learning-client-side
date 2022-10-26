@@ -22,11 +22,11 @@ const Login = () => {
 
     logInUser(userInfo.email, userInfo.password)
       .then((result) => {
-        const user = result.user;
+        //const user = result.user;
         navigate(from, { replace: true });
       })
       .catch((error) => {
-        const errorCode = error.code;
+        //const errorCode = error.code;
         const errorMessage = error.message;
         toast.error(errorMessage);
       });
@@ -35,33 +35,36 @@ const Login = () => {
   const handleSignInWithGoogle = () => {
     googleSignIn(provider)
       .then((result) => {
-        const user = result.user;
+        //const user = result.user;
         navigate(from, { replace: true });
+        toast.success("Login Success");
       })
       .catch((error) => {
-        const errorCode = error.code;
+        //const errorCode = error.code;
         const errorMessage = error.message;
+        toast.error(errorMessage);
       });
   };
 
   const handleSignInWithGithub = () => {
     githubSignIn(gitProvider)
       .then((result) => {
-        const user = result.user;
+        //const user = result.user;
         navigate(from, { replace: true });
+        toast.success("Login Success");
       })
       .catch((error) => {
-        const errorMessage = error.message;
+        //const errorMessage = error.message;
       });
   };
 
   const handleEmailChange = (e) => {
-    const email = e.target.value;
+    //const email = e.target.value;
     setUserInfo({ ...userInfo, email: e.target.value });
   };
 
   const handlePasswordChange = (e) => {
-    const password = e.target.value;
+    //const password = e.target.value;
     setUserInfo({ ...userInfo, password: e.target.value });
   };
 

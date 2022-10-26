@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
     createUser(userInfo.email, userInfo.password)
       .then((result) => {
-        const user = result.user;
+        //const user = result.user;
         navigate("/");
         updateInfo({ displayName: userInfo.name })
           .then(() => {
@@ -39,7 +39,7 @@ const Register = () => {
   const handleSignInWithGoogle = () => {
     googleSignIn(proviver)
       .then((result) => {
-        const user = result.user;
+        //const user = result.user;
         navigate("/");
       })
       .catch((error) => {
@@ -50,26 +50,26 @@ const Register = () => {
   const handleSignInWithGithub = () => {
     githubSignIn(gitProvider)
       .then((result) => {
-        const user = result.user;
+        //const user = result.user;
         navigate("/");
       })
       .catch((error) => {
-        const errorMessage = error.message;
+        //const errorMessage = error.message;
       });
   };
 
   const handleNameChange = (e) => {
-    const name = e.target.value;
+    //const name = e.target.value;
     setUserInfo({ ...userInfo, name: e.target.value });
   };
 
   const handleEmailChange = (e) => {
-    const email = e.target.value;
+    //const email = e.target.value;
     setUserInfo({ ...userInfo, email: e.target.value });
   };
 
   const handlePasswordChange = (e) => {
-    const password = e.target.value;
+    //const password = e.target.value;
     setUserInfo({ ...userInfo, password: e.target.value });
   };
 
