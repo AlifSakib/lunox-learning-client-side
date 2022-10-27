@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 import { AuthContext } from "../../contexts/AuthProvider";
 const Header = () => {
@@ -22,8 +22,8 @@ const Header = () => {
 
   return (
     <div>
-      <div className="px-4 py-5  dark:bg-slate-900 dark:text-white">
-        <div className="relative flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="px-4 py-5  dark:bg-slate-900 dark:text-white z-10">
+        <div className="relative flex items-center justify-between mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 z-10">
           <Link
             to="/"
             aria-label="Company"
@@ -65,51 +65,69 @@ const Header = () => {
               </button>
             </li>
             <li>
-              <Link
-                to="/"
+              <NavLink
+                to="/home"
                 aria-label="Home"
                 title="Home"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
+                // className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
+
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium tracking-wide  transition-colors duration-200 hover:text-blue-400 text-blue-400 underline underline-offset-4"
+                    : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                }
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/courses"
                 aria-label="Courses"
                 title="Courses"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium tracking-wide  transition-colors duration-200 hover:text-blue-400 text-blue-400 underline underline-offset-4"
+                    : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                }
               >
                 Courses
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/blogs"
                 aria-label="Blogs"
                 title="Blogs"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium tracking-wide  transition-colors duration-200 hover:text-blue-400 text-blue-400 underline underline-offset-4"
+                    : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                }
               >
                 Blog
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/faq"
                 aria-label="FAQ"
                 title="FAQ"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400 dark:text-white"
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-medium tracking-wide  transition-colors duration-200 hover:text-blue-400 text-blue-400 underline underline-offset-4"
+                    : "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                }
               >
                 FAQ
-              </Link>
+              </NavLink>
             </li>
             {user && (
               <li>
-                <button
+                <Link
                   data-tip
                   data-for="username"
-                  href="/"
+                  to="/profile"
                   aria-label="About us"
                   title=""
                   className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -136,7 +154,7 @@ const Header = () => {
                       )}
                     </div>
                   </div>
-                </button>
+                </Link>
                 {user.displayName && (
                   <ReactTooltip id="username" place="top" effect="solid">
                     {user.displayName}
@@ -193,7 +211,7 @@ const Header = () => {
               </svg>
             </button>
             {isMenuOpen && (
-              <div className="absolute top-0 left-0 w-full">
+              <div className="absolute top-0 left-0 w-full z-10">
                 <div className="p-5 bg-white border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div>

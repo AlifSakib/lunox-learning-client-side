@@ -32,7 +32,7 @@ const FAQ = () => {
                   />
                 </svg>
               </span>{" "}
-              <h1 className="text-6xl"> What can we help you find?</h1>
+              <p className="text-6xl"> What can we help you find?</p>
             </h2>
           </div>
         </div>

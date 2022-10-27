@@ -10,6 +10,7 @@ import ErrorPage from "../components/Pages/ErrorPage/ErrorPage";
 import FAQ from "../components/Pages/FAQ/FAQ";
 import Login from "../components/Pages/Login/Login";
 import Register from "../components/Pages/Register/Register";
+import Profile from "../components/Profile/Profile";
 
 import Main from "../layout/Main";
 import PrivateRoutes from "./PrivateRoutes";
@@ -73,6 +74,10 @@ export const router = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ></FAQ>,
+      },
+      {
+        path: "/profile",
+        element: <Profile></Profile>,
       },
       {
         path: "/login",
