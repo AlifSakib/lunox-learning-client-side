@@ -6,10 +6,7 @@
 
 # \_Lunox Learning
 
-This is a learning based website wehere students can chose explore courses,
-They can download course pdf and also they can get premium for that they have to become an user first.
-So ,thats the simple defination of my simple website , and there are some other pages
-like blogs , FAQ , etc .
+This is my first complete project with react.I used React, Tailwind, React-Router-Dom , Firebase to build this project . I tried to implement dark and light mode, react router , private route . Implemented firebase authentication system . Used react pdf downloaded , React icons , React-hot toast .
 
 ## Acknowledgements
 
